@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Trends Report 2026 - Zusammenfassung</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+  }
+
+  .slide {
+    width: 1280px;
+    height: 720px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    page-break-after: always;
+  }
+
+  /* SLIDE 1 */
+  .slide-1 {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+  }
+  .slide-1 .accent-line {
+    position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  }
+  .slide-1 .content {
+    padding: 80px 80px 60px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slide-1 .tag {
+    font-size: 13px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+    color: #3b82f6; margin-bottom: 24px;
+  }
+  .slide-1 h1 {
+    font-size: 48px; font-weight: 800; line-height: 1.1; margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .slide-1 .subtitle {
+    font-size: 20px; color: #94a3b8; line-height: 1.5; max-width: 700px; margin-bottom: 40px;
+  }
+  .slide-1 .stats-row {
+    display: flex; gap: 60px; margin-top: 20px;
+  }
+  .slide-1 .stat { text-align: left; }
+  .slide-1 .stat-num {
+    font-size: 42px; font-weight: 800;
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .slide-1 .stat-label { font-size: 13px; color: #64748b; margin-top: 4px; letter-spacing: 1px; }
+  .slide-1 .source {
+    position: absolute; bottom: 30px; right: 80px;
+    font-size: 12px; color: #475569;
+  }
+
+  /* SLIDE 2 */
+  .slide-2 {
+    background: linear-gradient(135deg, #0f172a 0%, #1a1a2e 100%);
+  }
+  .slide-2 .accent-line {
+    position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  }
+  .slide-2 .header {
+    padding: 40px 60px 20px;
+  }
+  .slide-2 .header h2 {
+    font-size: 30px; font-weight: 700; color: #fff;
+  }
+  .slide-2 .header p {
+    font-size: 14px; color: #64748b; margin-top: 6px;
+  }
+  .slide-2 .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    padding: 10px 60px 40px;
+  }
+  .slide-2 .category {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 16px 14px;
+    transition: all 0.3s;
+  }
+  .slide-2 .category:hover {
+    border-color: rgba(59,130,246,0.4);
+    background: rgba(59,130,246,0.06);
+  }
+  .slide-2 .cat-icon {
+    font-size: 22px; margin-bottom: 8px;
+  }
+  .slide-2 .cat-title {
+    font-size: 12px; font-weight: 700; color: #3b82f6;
+    text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;
+  }
+  .slide-2 .trend {
+    font-size: 11px; color: #cbd5e1; padding: 5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    line-height: 1.3;
+  }
+  .slide-2 .trend:last-child { border-bottom: none; }
+  .slide-2 .trend-num {
+    color: #3b82f6; font-weight: 700; margin-right: 4px;
+  }
+  .slide-2 .source {
+    position: absolute; bottom: 16px; right: 60px;
+    font-size: 11px; color: #475569;
+  }
+
+  /* SLIDE 3 */
+  .slide-3 {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+  .slide-3 .accent-line {
+    position: absolute; top: 0; left: 0; width: 100%; height: 5px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+  }
+  .slide-3 .content {
+    padding: 40px 60px;
+  }
+  .slide-3 h2 {
+    font-size: 28px; font-weight: 700; margin-bottom: 24px;
+  }
+  .slide-3 .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .slide-3 .action-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 20px 18px;
+  }
+  .slide-3 .action-card h3 {
+    font-size: 14px; font-weight: 700; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .slide-3 .action-card .priority {
+    font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 600;
+  }
+  .slide-3 .p1 { background: #dc2626; color: #fff; }
+  .slide-3 .p2 { background: #f59e0b; color: #000; }
+  .slide-3 .p3 { background: #3b82f6; color: #fff; }
+  .slide-3 .action-item {
+    font-size: 12px; color: #94a3b8; padding: 4px 0;
+    display: flex; align-items: flex-start; gap: 6px; line-height: 1.4;
+  }
+  .slide-3 .action-item::before {
+    content: ""; display: inline-block; width: 5px; height: 5px;
+    background: #3b82f6; border-radius: 50%; margin-top: 5px; flex-shrink: 0;
+  }
+  .slide-3 .bottom-bar {
+    display: flex; gap: 20px; margin-top: 12px;
+  }
+  .slide-3 .kpi-box {
+    flex: 1;
+    background: rgba(59,130,246,0.08);
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 8px;
+    padding: 14px 16px;
+    text-align: center;
+  }
+  .slide-3 .kpi-box .kpi-value {
+    font-size: 24px; font-weight: 800; color: #3b82f6;
+  }
+  .slide-3 .kpi-box .kpi-label {
+    font-size: 11px; color: #64748b; margin-top: 2px;
+  }
+  .slide-3 .source {
+    position: absolute; bottom: 16px; right: 60px;
+    font-size: 11px; color: #475569;
+  }
+
+  @media print {
+    body { background: #fff; }
+    .slide { margin: 0; border-radius: 0; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Titel & Kernbotschaft -->
+<div class="slide slide-1">
+  <div class="accent-line"></div>
+  <div class="content">
+    <div class="tag">statworx & AI Hub Frankfurt | Februar 2026</div>
+    <h1>AI Trends Report 2026<br>Executive Summary</h1>
+    <div class="subtitle">
+      KI im Entscheidungsjahr: Zwischen Durchbruch und Bewaehrungsprobe.
+      Die Phase der staunenden Beobachtung ist vorbei &mdash; 2026 wird
+      die Spreu vom Weizen trennen.
+    </div>
+    <div class="stats-row">
+      <div class="stat">
+        <div class="stat-num">20</div>
+        <div class="stat-label">KI-TRENDS</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-label">KATEGORIEN</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">70+</div>
+        <div class="stat-label">EXPERT STATEMENTS</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">138</div>
+        <div class="stat-label">SEITEN</div>
+      </div>
+    </div>
+  </div>
+  <div class="source">AI Trends Report 2026 &copy; statworx & AI Hub Frankfurt</div>
+</div>
+
+<!-- SLIDE 2: 20 Trends auf einen Blick -->
+<div class="slide slide-2">
+  <div class="accent-line"></div>
+  <div class="header">
+    <h2>20 KI-Trends in 5 Kategorien</h2>
+    <p>Die zentralen Entwicklungen, die Unternehmen 2026 praegen werden</p>
+  </div>
+  <div class="grid">
+
+    <div class="category">
+      <div class="cat-icon">&#127970;</div>
+      <div class="cat-title">Unternehmen</div>
+      <div class="trend"><span class="trend-num">01</span> Resultate statt Experimente</div>
+      <div class="trend"><span class="trend-num">02</span> Erfolgsfaktor KI-Governance</div>
+      <div class="trend"><span class="trend-num">03</span> Agenten auf Bewaehrung</div>
+      <div class="trend"><span class="trend-num">04</span> Roboter, ready for work</div>
+    </div>
+
+    <div class="category">
+      <div class="cat-icon">&#128101;</div>
+      <div class="cat-title">Arbeit & Org.</div>
+      <div class="trend"><span class="trend-num">05</span> Das zweite Ich (Wearables)</div>
+      <div class="trend"><span class="trend-num">06</span> Der stille Vermittler (GEO)</div>
+      <div class="trend"><span class="trend-num">07</span> One-Person-Unicorn</div>
+      <div class="trend"><span class="trend-num">08</span> Die neue Wissensarbeit</div>
+    </div>
+
+    <div class="category">
+      <div class="cat-icon">&#127758;</div>
+      <div class="cat-title">Wirtschaft & Macht</div>
+      <div class="trend"><span class="trend-num">09</span> Geopolitics of Compute</div>
+      <div class="trend"><span class="trend-num">10</span> Energie als Nadeloehr</div>
+      <div class="trend"><span class="trend-num">11</span> Regulierung im Rueckwaertsgang</div>
+      <div class="trend"><span class="trend-num">12</span> KI im Gefecht</div>
+    </div>
+
+    <div class="category">
+      <div class="cat-icon">&#127891;</div>
+      <div class="cat-title">Wissenschaft & Kultur</div>
+      <div class="trend"><span class="trend-num">13</span> Forschung 2.0</div>
+      <div class="trend"><span class="trend-num">14</span> Echt war gestern (Deepfakes)</div>
+      <div class="trend"><span class="trend-num">15</span> Next Level Bildung</div>
+      <div class="trend"><span class="trend-num">16</span> Der erste KI-Hit</div>
+    </div>
+
+    <div class="category">
+      <div class="cat-icon">&#9881;</div>
+      <div class="cat-title">Technologie</div>
+      <div class="trend"><span class="trend-num">17</span> World Models (Sim-to-Real)</div>
+      <div class="trend"><span class="trend-num">18</span> Fortschritt in Zeitlupe?</div>
+      <div class="trend"><span class="trend-num">19</span> DataOps & AgentOps</div>
+      <div class="trend"><span class="trend-num">20</span> ChatGPT goes Platform</div>
+    </div>
+
+  </div>
+  <div class="source">AI Trends Report 2026 &copy; statworx & AI Hub Frankfurt</div>
+</div>
+
+<!-- SLIDE 3: Action Plan -->
+<div class="slide slide-3">
+  <div class="accent-line"></div>
+  <div class="content">
+    <h2>Strategischer Action Plan 2026</h2>
+
+    <div class="actions-grid">
+
+      <div class="action-card">
+        <h3><span class="priority p1">SOFORT</span> Governance & Compliance</h3>
+        <div class="action-item">Use-Case-Inventar mit Risikoklassifizierung (AI Act)</div>
+        <div class="action-item">AI Literacy Programm fuer alle Mitarbeitenden</div>
+        <div class="action-item">Shadow-AI-Audit & zentrale Richtlinien</div>
+        <div class="action-item">KI-Projekte: Kill/Scale-Entscheidung erzwingen</div>
+        <div class="action-item">Content-Kennzeichnung (Art. 50 AI Act)</div>
+      </div>
+
+      <div class="action-card">
+        <h3><span class="priority p2">Q2-Q4</span> Skalierung & Infrastruktur</h3>
+        <div class="action-item">Agent Hub fuer zentrale Orchestrierung</div>
+        <div class="action-item">DataOps + AgentOps vereinheitlichen</div>
+        <div class="action-item">Sovereign-Cloud-Strategie evaluieren</div>
+        <div class="action-item">GEO-Strategie & maschinenlesbare Daten</div>
+        <div class="action-item">API-First-Architektur fuer Agenten</div>
+      </div>
+
+      <div class="action-card">
+        <h3><span class="priority p3">2026+</span> Zukunftsinvestitionen</h3>
+        <div class="action-item">World Models / Digital Twins evaluieren</div>
+        <div class="action-item">Connected Worker Konzept pilotieren</div>
+        <div class="action-item">Robotik-Readiness Assessment</div>
+        <div class="action-item">Scientific AI fuer R&D</div>
+        <div class="action-item">Leadership-Lab-Crowd Kulturmodell</div>
+      </div>
+
+    </div>
+
+    <div class="bottom-bar">
+      <div class="kpi-box">
+        <div class="kpi-value">&gt;40%</div>
+        <div class="kpi-label">KI-Projekte produktiv</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-value">&gt;70%</div>
+        <div class="kpi-label">AI Literacy Coverage</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-value">&lt;8 Wo.</div>
+        <div class="kpi-label">Time-to-Deploy</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-value">&gt;90%</div>
+        <div class="kpi-label">Audit-Passrate</div>
+      </div>
+      <div class="kpi-box">
+        <div class="kpi-value">&lt;5%</div>
+        <div class="kpi-label">Shadow-AI-Quote</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="source">AI Trends Report 2026 &copy; statworx & AI Hub Frankfurt</div>
+</div>
+
+</body>
+</html>
